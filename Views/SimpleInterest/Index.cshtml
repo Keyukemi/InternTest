@@ -1,0 +1,20 @@
+@model SimpleInterestModel;
+
+@{
+    ViewData["Title"] = "Simple Interest Calculator";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Calculate your Simple Interest</p>
+
+<form asp-action="Index" asp-controller="SimpleInterest" method="post"> 
+    <div asp-validation-summary="All"></div>
+    <input type="number" asp-for="Price" placeholder="Enter Amount to Borrow">
+    <input type="number" asp-for="Time" placeholder="Enter Time to Borrow">
+    <button type="submit">Calculate</button>
+</form>
+
+@* @if(ViewBag.Interest != null){
+    <p>Your Interest Rate is @ViewBag.Interest</p>
+} *@
+ 
